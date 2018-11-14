@@ -1,0 +1,19 @@
+{% extends 'assist/base.html' %}
+
+{% load static %}
+
+{% block content %}
+	{% if user.is_authenticated %}
+    <h1>New post</h1>
+    
+    {{ form.media }}
+	<form  method="post" action='' enctype="multipart/form-data">
+	    {% csrf_token %}
+	    {{ form.as_p  }}
+	    <input class="button" type="submit" value="Save">
+	</form>
+	{% else %}
+	<h1>You do not have permission to edit on this domain.</h1>
+	<h2 id="test" class="temp-test">Hello Test</h2>
+	{% endif %}
+{% endblock %}
