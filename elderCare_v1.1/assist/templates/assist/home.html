@@ -6,25 +6,25 @@
 <div class="w3-container" style="margin-top:80px" id="showcase">
                 <h1 class="w3-jumbo">We Care</h1>
                 <h1 class="w3-xxxlarge w3-text-red"></h1>
-                <hr style="width:50px;border:5px solid red" class="w3-round">
+                <hr style="width:50px;border:5px solid #088DA5" class="w3-round">
             </div>
 
             <div id="main">
                 <h1>
-                    <a name="homeSubmenu">Providing the information you may need on Care Taking.</a>
+                    <a id="catchphrase">Caregiving may be difficult. Getting useful information shouldn't be.</a>
                 </h1>
 
                 <div class="w3-row-padding">
                     <div class="w3-half">
                       <img class="header-img" src="{% static 'images/man2.png' %}" style="width:100%">
                       <img class="header-img" src="{% static 'images/couples.png' %}" style="width:100%">
-                      <img class="header-img" src="{% static 'images/man.png' %}" style="width:100%">
+                      <img class="header-img" src="{% static 'images/man_2.jpg' %}" style="width:100%">
                     </div>
 
                     <div class="w3-half">
                       <img class="header-img" src="{% static 'images/blackold.png' %}" style="width:100%">
                       <img class="header-img" src="{% static 'images/otherstuff.png' %}" style="width:100%">
-                      <img class="header-img" src="{% static 'images/woman.png' %}" style="width:100%">
+                      <img class="header-img" src="{% static 'images/woman_2.jpg' %}" style="width:100%">
                     </div>
                 </div>
 
@@ -39,10 +39,10 @@
               <!-- Services -->
             <div class="w3-container" id="services" style="margin-top:75px">
                 <h1 class="w3-xxxlarge w3-text-red">Sections</h1>
-                <hr style="width:50px;border:5px solid red" class="w3-round">
+                <hr style="width:50px;border:5px solid #088DA5" class="w3-round">
                 
                 {% for section in sections %}  
-                    <p class="w3-xlarge w3-text-blue w3-hover-black">
+                    <p class="w3-xlarge w3-text-blue w3-hover-blue">
                         <a href="{% url 'doc_detail' pk=section.pk %}">{{ section.title }}</a> 
                     </p>
                 {% endfor %}              
@@ -50,37 +50,44 @@
               
 
             <!-- Designers -->
-            <div name="about" class="w3-container" id="designers" style="margin-top:75px">
+            <div id="about" class="w3-container" id="designers" style="margin-top:75px">
                 <h1 class="w3-xxxlarge w3-text-red">
                     About Us
                 </h1>
-                <hr style="width:50px;border:5px solid red" class="w3-round">
-                <p>This website was created with a simple goal in mind, to answer the basic questions someone may have upon Caregiving.
-              Research represented in the following pages has been conducted by California State University of Sacramento Professor of Gerontology, Sal Arrigo.
-              Web development team, CareGivers, that conducted  this website are Thomas Duong, Victor Tram,Jeremiah Cabuago,Jeremy Albright, Warsame Jirde, Nagvit Bhandal, and Amritpal Atwal</p>
+                <hr style="width:50px;border:5px solid #088DA5; " class="w3-round">
+                <p>This website was created with a simple goal in mind, to answer the basic questions someone may have upon caregiving. Research represented in the following pages has been conducted by California State University Sacramento Adjunct Professor of Recreation, Parks & Tourism Administration , Sal Arrigo. 
+                </p>
+                <p>
+                Web development team, CareGivers, that conducted  this website are Thomas Duong, Victor Tram,Jeremiah Cabuago,Jeremy Albright, Warsame Jirde, Nagvit Bhandal, and Amritpal Atwal</p>
             
                 <p><b>Our designers are thoughtfully chosen</b>:</p>
             </div>
 
-            <!-- The Team -->
+            <!-- The Designer -->
             <div name="team" class="w3-row-padding w3-grayscale w3-medium">
                 <div class="w3-col m4 w3-margin-bottom" >
                     <div class="w3-light-grey">
                         <a href = "https://www.csus.edu/hhs/rpta/faculty/arrigo.html" > 
-                            <img src ="{% static 'images/sal.png' %}" width = "40%" alt = "">
+                            <img class="img" src ="{% static 'images/sal.png' %}" width = "40%" alt = "">
                         </a>
                         <div class="w3-container">
                             <h3>Mr. Sal Arrigo</h3>
                             <p class="w3-opacity">Educator</p>
-                            <p>Idea Man</p>
+                            <p>Designer</p>
                         </div>
                     </div>
                 </div>
+            </div>
+            <!-- Team -->
+            <div name="team" class="w3-row-padding w3-grayscale w3-medium">    
+                
+                <p style="font-size:25px;font-weight:400">Web Development Team</p>
+                
                 <div class="w3-col m4 w3-margin-bottom">
                     <div class="w3-light-grey">
                         <div class="w3-container">
                             <a>
-                                <img src ="{% static 'images/no-profile.jpg' %}" width = "45%" alt = "">
+                                <img class="img" src ="{% static 'images/thomas.jpg' %}" width = "45%" alt = "">
                             </a>
                             <h3>Thomas Duong</h3>
                             <p class="w3-opacity">Student</p>
@@ -92,7 +99,7 @@
                     <div class="w3-light-grey">
                         <div class="w3-container">
                             <a>
-                                <img src ="{% static 'images/no-profile.jpg' %}" width = "45%" alt = "">
+                                <img class="img" src ="{% static 'images/victor.jpg' %}" width = "45%" alt = "">
                             </a>
                             <h3>Victor Tram</h3>
                             <p class="w3-opacity">Student</p>
@@ -104,7 +111,7 @@
                     <div class="w3-light-grey">
                         <div class="w3-container">
                             <a>
-                                <img src ="{% static 'images/no-profile.jpg' %}" width = "45%" alt = "">
+                                <img class="img" src ="{% static 'images/jeremiah.jpg' %}" width = "45%" alt = "">
                             </a>
                             <h3>Jeremiah Cabuago</h3>
                             <p class="w3-opacity">Student</p>
@@ -116,7 +123,7 @@
                     <div class="w3-light-grey">
                         <div class="w3-container">
                             <a>
-                                <img src ="{% static 'images/no-profile.jpg' %}" width = "45%" alt = "">
+                                <img class="img" src ="{% static 'images/jeremy.jpg' %}" width = "45%" alt = "">
                             </a>
                             <h3>Jeremy Albright</h3>
                             <p class="w3-opacity">Student</p>
@@ -128,7 +135,7 @@
                     <div class="w3-light-grey">
                         <div class="w3-container">
                             <a>
-                                <img src ="{% static 'images/no-profile.jpg' %}" width = "45%" alt = "">
+                                <img class="img" src ="{% static 'images/warsame.jpg' %}" width = "45%" alt = "">
                             </a>
                             <h3>Warsame Jirde</h3>
                             <p class="w3-opacity">Student</p>
@@ -140,7 +147,7 @@
                     <div class="w3-light-grey">
                         <div class="w3-container">
                             <a>
-                                <img src ="{% static 'images/no-profile.jpg' %}" width = "45%" alt = "">
+                                <img class="img" src ="{% static 'images/nagvit.jpg' %}" width = "45%" alt = "">
                             </a>
                             <h3>Nagvit Bhandal</h3>
                             <p class="w3-opacity">Student</p>
@@ -152,7 +159,7 @@
                     <div class="w3-light-grey">
                         <div class="w3-container">
                             <a>
-                                <img src ="{% static 'images/no-profile.jpg' %}" width = "45%" alt = "">
+                                <img class="img" src ="{% static 'images/amritpal.jpg' %}" width = "45%" alt = "">
                             </a>
                             <h3>Amritpal Atwal</h3>
                             <p class="w3-opacity">Student</p>

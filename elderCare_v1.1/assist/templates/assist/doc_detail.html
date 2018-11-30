@@ -1,7 +1,16 @@
 {% extends 'assist/base.html' %}
 
 {% block content %}
+    <style>
+        
+        a:link span{
+            color: #4298f4;
+            text-align: center; 
+            text-decoration: none;
+            display: inline-block;
+        }
 
+    </style>
     <div class="section">
         
         <a class="btn btn-default" href="{% url 'doc_edit' pk=section.pk %}">
